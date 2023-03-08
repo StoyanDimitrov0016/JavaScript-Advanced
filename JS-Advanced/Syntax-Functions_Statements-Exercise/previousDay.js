@@ -4,6 +4,5 @@ function previousDayCalc(year, month, day) {
 
     console.log(previousDay.getFullYear() + "-" + (previousDay.getMonth() + 1) + "-" + previousDay.getDate());
 }
-
 previousDayCalc(2023, 3, 8);
 previousDayCalc(2016, 10, 1);
