@@ -9,8 +9,9 @@ function speedCalculator(speed, areaType) {
     };
 
     if (speedLimits[areaType] >= speed) {
-        console.log(`Driving ${speed} km/h in a ${speedLimits[areaType]} zone`);
+        return `Driving ${speed} km/h in a ${speedLimits[areaType]} zone`;
     } else {
+
         if (speed <= speedLimits[areaType] + 20) {
             status = 'speeding';
         } else if (speed <= speedLimits[areaType] + 40) {
@@ -18,10 +19,11 @@ function speedCalculator(speed, areaType) {
         } else {
             status = 'reckless driving';
         }
-        console.log(`The speed is ${speed - speedLimits[areaType]} km/h faster than the allowed speed of ${speedLimits[areaType]} - ${status}`);
+
+        return `The speed is ${speed - speedLimits[areaType]} km/h faster than the allowed speed of ${speedLimits[areaType]} - ${status}`;
     }
 }
-speedCalculator(40, 'city');
-speedCalculator(21, 'residential');
-speedCalculator(120, 'interstate');
-speedCalculator(200, 'motorway');
+console.log(speedCalculator(40, 'city'));
+console.log(speedCalculator(21, 'residential'));
+console.log(speedCalculator(120, 'interstate'));
+console.log(speedCalculator(200, 'motorway'));
